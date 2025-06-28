@@ -2,11 +2,11 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Bienvenido</title>
+    <title>CONTRIVIL - Bienvenido</title>
     <style>
         body {
             font-family: 'Segoe UI', sans-serif;
-            background-color: #f5f7fa;
+            background-color: #fef6f9;
             margin: 0;
             padding: 0;
             text-align: center;
@@ -19,19 +19,20 @@
         }
 
         img {
-            height: 160px;
+            height: 150px;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
             margin-bottom: 20px;
         }
 
         h1 {
-            color: #2c3e50;
+            color: #b5838d;
             margin-bottom: 10px;
+            font-size: 32px;
         }
 
         p {
-            color: #555;
+            color: #6d6875;
             font-size: 18px;
             margin-bottom: 30px;
         }
@@ -40,23 +41,24 @@
             display: inline-block;
             padding: 12px 25px;
             margin: 10px;
-            background-color: #3498db;
+            background-color: #cdb4db;
             color: white;
             text-decoration: none;
             border-radius: 8px;
-            transition: background-color 0.3s;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
         }
 
         .botones a:hover {
-            background-color: #2980b9;
+            background-color: #bfa2d6;
         }
     </style>
 </head>
 <body>
     <div class="contenedor">
-        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo del local">
-        <h1>¡Bienvenido al sistema de inventario!</h1>
-        <p>Administra tus productos, entradas y salidas, genera reportes y mantén el control total de tu negocio.</p>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo de CONTRIVIL">
+        <h1>Bienvenido a CONTRIVIL</h1>
+        <p>Tu sistema de control de inventario con estilo profesional y claridad pastel 🧾🌸</p>
 
         <div class="botones">
             <a href="/productos">Registrar Productos</a>
