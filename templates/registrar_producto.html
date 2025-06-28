@@ -5,20 +5,12 @@
   <title>Registrar Producto</title>
 </head>
 <body>
-  <h2>Formulario de Registro de Producto</h2>
+  <h2>Registrar Producto</h2>
   <form method="POST" enctype="multipart/form-data">
-    <label>Nombre:</label><br>
-    <input type="text" name="nombre" required><br><br>
-
-    <label>Cantidad:</label><br>
-    <input type="number" name="cantidad" required><br><br>
-
-    <label>Precio:</label><br>
-    <input type="number" name="precio" step="0.01" required><br><br>
-
-    <label>Imagen:</label><br>
-    <input type="file" name="imagen"><br><br>
-
+    <label>Nombre:</label><br><input type="text" name="nombre"><br>
+    <label>Cantidad:</label><br><input type="number" name="cantidad"><br>
+    <label>Precio:</label><br><input type="number" name="precio" step="0.01"><br>
+    <label>Imagen:</label><br><input type="file" name="imagen"><br><br>
     <button type="submit">Guardar Producto</button>
   </form>
 </body>
