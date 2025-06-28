@@ -1,29 +1,25 @@
-{% extends 'layout.html' %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registrar Producto</title>
+</head>
+<body>
+  <h2>Formulario de Registro de Producto</h2>
+  <form method="POST" enctype="multipart/form-data">
+    <label>Nombre:</label><br>
+    <input type="text" name="nombre" required><br><br>
 
-{% block title %}Registrar Producto{% endblock %}
+    <label>Cantidad:</label><br>
+    <input type="number" name="cantidad" required><br><br>
 
-{% block content %}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <div class="container">
-        <h2 class="mb-4">Registrar Producto</h2>
-        <form action="/registrar" method="POST" enctype="multipart/form-data" class="border p-4 bg-white rounded shadow">
-            <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre del producto:</label>
-                <input type="text" name="nombre" class="form-control" required>
-            </div>
-            <div class="mb-3">
-                <label for="cantidad" class="form-label">Cantidad:</label>
-                <input type="number" name="cantidad" class="form-control" required>
-            </div>
-            <div class="mb-3">
-                <label for="precio" class="form-label">Precio:</label>
-                <input type="number" step="0.01" name="precio" class="form-control" required>
-            </div>
-            <div class="mb-3">
-                <label for="imagen" class="form-label">Imagen del producto:</label>
-                <input type="file" name="imagen" class="form-control" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Registrar</button>
-        </form>
-    </div>
-{% endblock %}
+    <label>Precio:</label><br>
+    <input type="number" name="precio" step="0.01" required><br><br>
+
+    <label>Imagen:</label><br>
+    <input type="file" name="imagen"><br><br>
+
+    <button type="submit">Guardar Producto</button>
+  </form>
+</body>
+</html>
