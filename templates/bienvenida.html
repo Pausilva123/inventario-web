@@ -1,15 +1,69 @@
-{% extends 'layout.html' %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenido</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
 
-{% block title %}Bienvenido{% endblock %}
+        .contenedor {
+            max-width: 800px;
+            margin: auto;
+            padding: 40px;
+        }
 
-{% block content %}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <div class="container">
-        <h2 class="text-success">Bienvenido, {{ session['usuario'] }}</h2>
-        <p class="lead">Ya puedes acceder al sistema de inventario.</p>
-        <a href="/registrar" class="btn btn-primary">Ir al panel</a>
-        <a href="/logout" class="btn btn-outline-danger">Cerrar sesión</a>
+        img {
+            height: 160px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .botones a {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 10px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .botones a:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo del local">
+        <h1>¡Bienvenido al sistema de inventario!</h1>
+        <p>Administra tus productos, entradas y salidas, genera reportes y mantén el control total de tu negocio.</p>
+
+        <div class="botones">
+            <a href="/productos">Registrar Productos</a>
+            <a href="/entradas">Registrar Entradas</a>
+            <a href="/salidas">Registrar Salidas</a>
+        </div>
     </div>
-{% endblock %}
-<img src="{{ url_for('static', filename='logo.png') }}" alt="Logo del local" style="height: 120px; margin-bottom: 20px;">
+</body>
+</html>
 
