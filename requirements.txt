@@ -1,0 +1,6 @@
+Flask
+pandas
+gunicorn
+fpdf
+openpyxl
+Pillow
